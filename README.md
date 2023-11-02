@@ -7,7 +7,7 @@ Home: https://aws.amazon.com/sagemaker/
 
 Package license: LicenseRef-.amazon.com.-AmznSL-1.0
 
-Summary: SageMaker JupyterLab workspace primary UI module
+Summary: SageMaker JupyterLab workspace primary extension module
 
 Current build status
 ====================
