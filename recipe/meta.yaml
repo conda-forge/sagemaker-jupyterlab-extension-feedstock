@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min  }}
     - jupyter_packaging >=0.12.0,<0.13.dev0
     - setuptools >=40.8.0
     - wheel
@@ -24,7 +24,7 @@ requirements:
     - jupyterlab >4
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min  }}
     - jupyterlab >=4
     - jupyter_events >=0.6.0
     - sagemaker-jupyterlab-extension-common
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min  }}
 
 about:
   home: https://aws.amazon.com/sagemaker/
