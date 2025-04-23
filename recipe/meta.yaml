@@ -1,5 +1,5 @@
 {% set name = "sagemaker-jupyterlab-extension" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 11dc4a72f5334b960ad1cb3bd9fe1d261a8969513a112d45efe60e17086bc58f
+  sha256: 43028fd5ef7a0ccc392ff6688ee591fe67432e13d1276a3293a9832558176bdf
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - jupyter_packaging >=0.12.0,<0.13.dev0
     - setuptools >=40.8.0
     - wheel
@@ -24,10 +24,11 @@ requirements:
     - jupyterlab >4
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - jupyterlab >=4
     - jupyter_events >=0.6.0
     - sagemaker-jupyterlab-extension-common
+    - jupyterlab-git >=0.51.1,<1.0.0
     - async-lru
     - aws-embedded-metrics
 
@@ -38,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://aws.amazon.com/sagemaker/
@@ -48,6 +50,5 @@ about:
 extra:
   recipe-maintainers:
     - gogakoreli
-    - gkoreli
     - nileshvd
     - zuoyuanh
