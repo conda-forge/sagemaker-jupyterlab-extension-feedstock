@@ -144,6 +144,7 @@ Feedstock Maintainers
 =====================
 
 * [@ChaonengQuan](https://github.com/ChaonengQuan/)
+* [@aakashmandavilli96](https://github.com/aakashmandavilli96/)
 * [@gogakoreli](https://github.com/gogakoreli/)
 * [@nileshvd](https://github.com/nileshvd/)
 * [@zuoyuanh](https://github.com/zuoyuanh/)
