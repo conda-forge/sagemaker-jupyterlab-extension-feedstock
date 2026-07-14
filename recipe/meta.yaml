@@ -21,11 +21,11 @@ requirements:
     - setuptools >=40.8.0
     - wheel
     - urllib3 <2
-    - jupyterlab >4
+    - jupyterlab >=4,<4.6
     - pip
   run:
     - python >={{ python_min }}
-    - jupyterlab >=4
+    - jupyterlab >=4,<4.6
     - jupyter_events >=0.6.0
     - sagemaker-jupyterlab-extension-common
     - jupyterlab-git >=0.51.1,<1.0.0
