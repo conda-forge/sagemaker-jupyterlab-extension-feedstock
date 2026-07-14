@@ -1,5 +1,5 @@
 {% set name = "sagemaker-jupyterlab-extension" %}
-{% set version = "0.5.9" %}
+{% set version = "0.5.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 302a192ac7759d26b72a548f957e59e674254106058988d1ce21138b94f0755c
+  sha256: 3c222b2f5bd64dbfa8a6c084c51dba4a55e345a5867be7e15626eb7095871414
 
 build:
   noarch: python
@@ -21,11 +21,11 @@ requirements:
     - setuptools >=40.8.0
     - wheel
     - urllib3 <2
-    - jupyterlab >4
+    - jupyterlab >=4,<4.6
     - pip
   run:
     - python >={{ python_min }}
-    - jupyterlab >=4
+    - jupyterlab >=4,<4.6
     - jupyter_events >=0.6.0
     - sagemaker-jupyterlab-extension-common
     - jupyterlab-git >=0.51.1,<1.0.0
